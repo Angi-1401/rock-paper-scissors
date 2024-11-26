@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-slate-50">
+    <!-- Header -->
+    <header class="w-full p-4">
+      <h1 class="text-3xl text-center">Rock Paper Scissors</h1>
+      <p class="text-center">Human vs. Computer. Who will win?</p>
+    </header>
+    <!-- Main Content / Game Section -->
+    <main class="w-full p-4">
+      <div class="grid grid-cols-2 items-center gap-4">
+        <!-- Player Options -->
+        <div class="flex flex-col gap-4">
+          <h2 class="text-2xl text-center">Choose your weapon</h2>
+          <div class="flex justify-around gap-4">
+            <div
+              id="rock"
+              class="p-4 rounded-lg text-white bg-gradient-to-br from-green-400 to-blue-600 focus:ring-4 focus:outline-none focus:ring-green-200 cursor-pointer">
+              <img src="./svg/rock.svg" alt="Rock" class="w-24" />
+            </div>
+            <div
+              id="paper"
+              class="p-4 rounded-lg text-white bg-gradient-to-r from-purple-500 to-pink-500 focus:ring-4 focus:outline-none focus:ring-purple-200 cursor-pointer">
+              <img src="./svg/roll-of-paper.svg" alt="Paper" class="w-24" />
+            </div>
+            <div
+              id="scissors"
+              class="p-4 rounded-lg text-white bg-gradient-to-br from-pink-500 to-orange-400 focus:ring-4 focus:outline-none focus:ring-pink-200 cursor-pointer">
+              <img src="./svg/scissors.svg" alt="Scissors" class="w-24" />
+            </div>
+          </div>
+        </div>
+        <!-- Results -->
+        <div
+          id="results"
+          class="flex flex-col items-center justify-center gap-4 bg-gray-100 border-2 border-gray-300 rounded-lg h-[20rem] p-4">
+          <!-- Results will be rendered here -->
+          <!-- Tbh, I want to make the text here bigger... But I'm tired of thinking 7-7 -->
+        </div>
+      </div>
+    </main>
+    <!-- Statistics -->
+    <section class="w-full p-4">
+      <div class="flex flex-col gap-4">
+        <h2 class="text-2xl text-center">Statistics</h2>
+        <div class="flex justify-center gap-4">
+          <div
+            class="flex flex-col items-center justify-center gap-2 bg-gray-100 border-2 border-gray-300 rounded-lg w-32 p-4">
+            <h3 class="text-2xl">Wins</h3>
+            <p id="wins" class="text-2xl font-bold">0</p>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center gap-2 bg-gray-100 border-2 border-gray-300 rounded-lg w-32 p-4">
+            <h3 class="text-2xl">Losses</h3>
+            <p id="losses" class="text-2xl font-bold">0</p>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center gap-2 bg-gray-100 border-2 border-gray-300 rounded-lg w-32 p-4">
+            <h3 class="text-2xl">Draws</h3>
+            <p id="draws" class="text-2xl font-bold">0</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- History -->
+    <section class="w-full p-4">
+      <div class="flex flex-col gap-4">
+        <h2 class="text-2xl text-center">History</h2>
+        <table class="text-sm text-left text-gray-500 rtl:text-right">
+          <thead class="text-xs text-left text-gray-700 uppercase bg-gray-100">
+            <tr>
+              <th scope="col" class="px-6 py-3">Player</th>
+              <th scope="col" class="px-6 py-3">Computer</th>
+              <th scope="col" class="px-6 py-3">Result</th>
+            </tr>
+          </thead>
+          <tbody id="history">
+            <!-- History will be rendered here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/c640c833fe.js"
+      crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
